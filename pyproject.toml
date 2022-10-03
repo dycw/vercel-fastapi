@@ -27,10 +27,10 @@ build-backend = "hatchling.build"
 sources = ["src"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/dycw_template"]
+packages = ["src/vercel_fastapi"]
 
 [tool.hatch.version]
-path = "src/dycw_template/__init__.py"
+path = "src/vercel_fastapi/__init__.py"
 
 #### isort ####################################################################
 [tool.isort]
@@ -50,7 +50,7 @@ style = "https://github.com/dycw/nitpick/blob/master/nitpick-style.toml"
 
 #### project ##################################################################
 [project]
-name = "dycw-template"
+name = "vercel-fastapi"
 dynamic = ["version"]
 readme = "README.md"
 requires-python = ">= 3.10"
@@ -109,7 +109,7 @@ reportUnusedCallResult = "error"
 addopts = [
   "-rsxX",
   "--color=auto",
-  "--cov=dycw_template",
+  "--cov=vercel_fastapi",
   "--cov-config=pyproject.toml",
   "--cov-report=html",
   "--strict-markers",
