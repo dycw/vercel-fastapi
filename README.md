@@ -1,1 +1,1 @@
-# `dycw-template`
+# `vercel-fastapi`
