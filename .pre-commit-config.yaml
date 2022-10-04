@@ -108,8 +108,20 @@ repos:
       - id: pip-compile
         args:
           - --allow-unsafe
+          - --generate-hashes
+          - --quiet
+          - --upgrade
+          - pyproject.toml
+        files: ^pyproject\.toml$
+  - repo: https://github.com/jazzband/pip-tools
+    rev: 6.8.0
+    hooks:
+      - id: pip-compile
+        args:
+          - --allow-unsafe
           - --extra=dev
           - --generate-hashes
+          - --output-file=requirements-dev.txt
           - --quiet
           - --upgrade
           - pyproject.toml
